@@ -1,0 +1,223 @@
+/* --------------- global setup --------------- */
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+  display: block;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* ------------ end of global setup ----------- */
+
+/* -------------- content wrapper ------------- */
+
+.content__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.container {
+  /* set default display*/
+  display: flex;
+  height: 100vh;
+  position: relative;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: 60px;
+
+}
+
+/* ---------- end of content wrapper ---------- */
+
+/* ------------- shared properties ------------ */
+
+.content {
+  padding: 30px 40px;
+  line-height: 1.2;
+}
+
+.heading__text p,
+.heading__text h1 {
+  margin: 0;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.ads__info {
+  padding: 30px 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+
+}
+
+.content>.ads__info>.ads__about {
+  width: 70%;
+  margin: 30px 0;
+  flex-wrap: nowrap;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.ads__button {
+  width: 80%;
+  padding: 20px;
+  font-size: 1.3rem;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  color: white;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+img.l__badge__img,
+img.r__badge__img {
+  width: 38%;
+  z-index: 1;
+  position: absolute;
+  top: 35px;
+  right: 30px;
+
+}
+
+/* --------- end of shared properties --------- */
+
+/* --------------- left wrapper --------------- */
+
+.left__wrapper {
+  background-color: #feb600;
+}
+
+
+.l__ads__text h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+
+}
+
+/* ------------ end of left wrapper ----------- */
+
+/* ----------------- animation ---------------- */
+
+.img {
+  position: relative;
+  transform: translateX(-50%);
+  transition: all .4s linear;
+  overflow: visible;
+
+}
+
+.ads__hd__pre__ani {
+  opacity: 0;
+  transition: all .4s linear;
+  transform: translateX(55%);
+  transition: .4s .3s linear;
+}
+
+
+.left__wrapper:hover>.l__ads__text>.ads__heading,
+.right__wrapper:hover>.r__ads__text>.ads__heading {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all .4s linear;
+}
+
+.ads__info>.ads__about,
+.ads__info>.ads__button {
+  transform: translateY(50%);
+  opacity: 0;
+}
+
+.ads__info>.ads__about {
+  transition: all .4s .2s linear;
+  cursor: pointer;
+}
+
+.ads__info>.ads__button {
+  transition: all .2s .3s linear;
+  cursor: pointer;
+}
+
+.left__wrapper:hover .ads__info>.ads__about,
+.left__wrapper:hover .ads__info>.ads__button,
+.right__wrapper:hover .ads__info>.ads__about,
+.right__wrapper:hover .ads__info>.ads__button {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.left__wrapper:hover .ads__info>.ads__about,
+.right__wrapper:hover .ads__info>.ads__about {
+  transition: all .4s .2s linear;
+}
+
+.left__wrapper:hover .ads__info>.ads__button, 
+.right__wrapper:hover .ads__info>.ads__button {
+  transition: all .2s .3s linear;
+}
+
+.left__wrapper:hover>.l__ads__img,
+.right__wrapper:hover>.r__ads__img {
+  transform: translateX(0%);
+  transition: all .4s linear;
+}
+
+.l__ads__img>img.l__badge__img,
+.r__ads__img>img.r__badge__img{
+  transform: translateX(30%);
+  transition: all .3s linear;
+
+}
+
+.left__wrapper:hover .l__ads__img>img.l__badge__img,
+.right__wrapper:hover .r__ads__img>img.r__badge__img {
+  transform: translateX(140%);
+  transition: all .3s .1s linear;
+
+}
+
+/*  animation - right side  */
+
+/* ------------- end of animation ------------- */
+
+
+/* --------------- right wrapper -------------- */
+.right__wrapper {
+  background-color: #f63500;
+}
+
+.r__ads__text {
+  color: white;
+}
+
+.r__ads__text h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+/* ----------- end of right wrapper ----------- */
